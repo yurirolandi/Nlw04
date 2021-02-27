@@ -1,10 +1,13 @@
-import style from '../../style/components/CompletedChallenges.module.css'
+import { useContext } from "react";
+import { ChallengesContext } from "../../contexts/ChallengesContext";
+import style from "../../style/components/CompletedChallenges.module.css";
 
 export function CompletedChallenges() {
-    return(
-        <div className={style.completedChallenges}>
-            <span>Desafios Completos</span>
-            <span>5</span>
-        </div>
-    )
+  const { challengesCompleted } = useContext(ChallengesContext);
+  return (
+    <div className={style.completedChallenges}>
+      <span>Desafios Completos</span>
+      <span>{challengesCompleted}</span>
+    </div>
+  );
 }
