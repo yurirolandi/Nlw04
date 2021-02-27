@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import styles from "../../style/components/ChallengeBox.module.css";
+import { ChallengesContext } from "../../contexts/ChallengesContext";
 
 export function ChallengeBox() {
+  const contextValue = useContext(ChallengesContext);
   const hasActiveChallenge = true;
   return (
     <div className={styles.challengeBoxContainer}>
@@ -14,8 +17,12 @@ export function ChallengeBox() {
           </main>
 
           <footer>
-            <button type="button" className={styles.challengeFailedButton}>Falhei</button>
-            <button type="button" className={styles.challengeSucceededButton}>Completei</button>
+            <button type="button" className={styles.challengeFailedButton}>
+              Falhei
+            </button>
+            <button type="button" className={styles.challengeSucceededButton}>
+              Completei
+            </button>
           </footer>
         </div>
       ) : (
