@@ -1,0 +1,37 @@
+[
+  {
+    "type": "body",
+    "description": "Lorem Ipsum Dolor",
+    "amount": 70
+  },
+  {
+    "type": "body",
+    "description": "Lorem Ipsum Dolor",
+    "amount": 90
+  },
+  {
+    "type": "eyes",
+    "description": "Lorem Ipsum Dolor",
+    "amount": 60
+  },
+  {
+    "type": "body",
+    "description": "Lorem Ipsum Dolor",
+    "amount": 80
+  },
+  {
+    "type": "body",
+    "description": "Lorem Ipsum Dolor",
+    "amount": 70
+  },
+  {
+    "type": "body",
+    "description": "Lorem Ipsum Dolor",
+    "amount": 60
+  },
+  {
+    "type": "body",
+    "description": "Lorem Ipsum Dolor",
+    "amount": 100
+  }
+]
