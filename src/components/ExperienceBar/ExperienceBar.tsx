@@ -1,15 +1,27 @@
-import React from 'react'
-import styles from '../../style/components/ExperienceBar.module.css'
+import React, { useContext } from "react";
+import { ChallengesContext } from "../../contexts/ChallengesContext";
+import styles from "../../style/components/ExperienceBar.module.css";
 
 export default function ExperienceBar() {
+  const { currentExperience, experienceToNetxLevel } = useContext(
+    ChallengesContext
+  );
+
+  const percentToNetxtLevel =
+    Math.round(currentExperience * 100) / experienceToNetxLevel;
   return (
     <header className={styles.experienceBar}>
       <span>0 xp</span>
       <div>
-        <div style={{ width: "50%" }} />
-        <span className={styles.currentExperience} style={{ left: "50%" }}>300 xp</span>
+        <div style={{ width: `${percentToNetxtLevel}%` }} />
+        <span
+          className={styles.currentExperience}
+          style={{ left: `${percentToNetxtLevel}%` }}
+        >
+          {currentExperience} xp
+        </span>
       </div>
-      <span>600 xp</span>
+      <span>{experienceToNetxLevel} xp</span>
     </header>
   );
 }
